@@ -29,96 +29,150 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.edtServerIP = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnServerStart = new System.Windows.Forms.Button();
             this.edtServerPort = new System.Windows.Forms.TextBox();
-            this.edtClientPort = new System.Windows.Forms.TextBox();
+            this.edtServerIP = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnClientStart = new System.Windows.Forms.Button();
             this.edtClientIP = new System.Windows.Forms.TextBox();
+            this.edtClientPort = new System.Windows.Forms.TextBox();
             this.redtHistory = new System.Windows.Forms.RichTextBox();
             this.edtToSend = new System.Windows.Forms.TextBox();
             this.btnSend = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
-            this.btnServerStart = new System.Windows.Forms.Button();
-            this.btnClientStart = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btnServerStart);
             this.groupBox1.Controls.Add(this.edtServerPort);
             this.groupBox1.Controls.Add(this.edtServerIP);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(16, 15);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(741, 73);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(1038, 90);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Server";
             // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(779, 58);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 17);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "5000->";
+            // 
+            // btnServerStart
+            // 
+            this.btnServerStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnServerStart.Location = new System.Drawing.Point(920, 25);
+            this.btnServerStart.Margin = new System.Windows.Forms.Padding(4);
+            this.btnServerStart.Name = "btnServerStart";
+            this.btnServerStart.Size = new System.Drawing.Size(100, 28);
+            this.btnServerStart.TabIndex = 2;
+            this.btnServerStart.Text = "Start";
+            this.btnServerStart.UseVisualStyleBackColor = true;
+            this.btnServerStart.Click += new System.EventHandler(this.btnServerStart_Click);
+            // 
+            // edtServerPort
+            // 
+            this.edtServerPort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.edtServerPort.Location = new System.Drawing.Point(779, 25);
+            this.edtServerPort.Margin = new System.Windows.Forms.Padding(4);
+            this.edtServerPort.Name = "edtServerPort";
+            this.edtServerPort.Size = new System.Drawing.Size(132, 22);
+            this.edtServerPort.TabIndex = 1;
+            // 
+            // edtServerIP
+            // 
+            this.edtServerIP.Location = new System.Drawing.Point(24, 25);
+            this.edtServerIP.Margin = new System.Windows.Forms.Padding(4);
+            this.edtServerIP.Name = "edtServerIP";
+            this.edtServerIP.Size = new System.Drawing.Size(611, 22);
+            this.edtServerIP.TabIndex = 0;
+            // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.btnClientStart);
             this.groupBox2.Controls.Add(this.edtClientIP);
             this.groupBox2.Controls.Add(this.edtClientPort);
-            this.groupBox2.Location = new System.Drawing.Point(12, 134);
+            this.groupBox2.Location = new System.Drawing.Point(16, 165);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(741, 75);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Size = new System.Drawing.Size(1038, 92);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Client";
             // 
-            // edtServerIP
+            // btnClientStart
             // 
-            this.edtServerIP.Location = new System.Drawing.Point(18, 20);
-            this.edtServerIP.Name = "edtServerIP";
-            this.edtServerIP.Size = new System.Drawing.Size(459, 20);
-            this.edtServerIP.TabIndex = 0;
-            // 
-            // edtServerPort
-            // 
-            this.edtServerPort.Location = new System.Drawing.Point(483, 20);
-            this.edtServerPort.Name = "edtServerPort";
-            this.edtServerPort.Size = new System.Drawing.Size(100, 20);
-            this.edtServerPort.TabIndex = 1;
-            // 
-            // edtClientPort
-            // 
-            this.edtClientPort.Location = new System.Drawing.Point(483, 27);
-            this.edtClientPort.Name = "edtClientPort";
-            this.edtClientPort.Size = new System.Drawing.Size(100, 20);
-            this.edtClientPort.TabIndex = 1;
+            this.btnClientStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClientStart.Location = new System.Drawing.Point(920, 31);
+            this.btnClientStart.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClientStart.Name = "btnClientStart";
+            this.btnClientStart.Size = new System.Drawing.Size(100, 28);
+            this.btnClientStart.TabIndex = 3;
+            this.btnClientStart.Text = "Connect";
+            this.btnClientStart.UseVisualStyleBackColor = true;
+            this.btnClientStart.Click += new System.EventHandler(this.btnClientStart_Click);
             // 
             // edtClientIP
             // 
-            this.edtClientIP.Location = new System.Drawing.Point(18, 27);
+            this.edtClientIP.Location = new System.Drawing.Point(24, 33);
+            this.edtClientIP.Margin = new System.Windows.Forms.Padding(4);
             this.edtClientIP.Name = "edtClientIP";
-            this.edtClientIP.Size = new System.Drawing.Size(459, 20);
+            this.edtClientIP.Size = new System.Drawing.Size(611, 22);
             this.edtClientIP.TabIndex = 2;
+            // 
+            // edtClientPort
+            // 
+            this.edtClientPort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.edtClientPort.Location = new System.Drawing.Point(779, 33);
+            this.edtClientPort.Margin = new System.Windows.Forms.Padding(4);
+            this.edtClientPort.Name = "edtClientPort";
+            this.edtClientPort.Size = new System.Drawing.Size(132, 22);
+            this.edtClientPort.TabIndex = 1;
             // 
             // redtHistory
             // 
-            this.redtHistory.Location = new System.Drawing.Point(30, 215);
+            this.redtHistory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.redtHistory.Location = new System.Drawing.Point(40, 265);
+            this.redtHistory.Margin = new System.Windows.Forms.Padding(4);
             this.redtHistory.Name = "redtHistory";
-            this.redtHistory.Size = new System.Drawing.Size(565, 96);
+            this.redtHistory.Size = new System.Drawing.Size(1014, 117);
             this.redtHistory.TabIndex = 2;
             this.redtHistory.Text = "";
             // 
             // edtToSend
             // 
-            this.edtToSend.Location = new System.Drawing.Point(30, 317);
+            this.edtToSend.Location = new System.Drawing.Point(40, 390);
+            this.edtToSend.Margin = new System.Windows.Forms.Padding(4);
             this.edtToSend.Name = "edtToSend";
-            this.edtToSend.Size = new System.Drawing.Size(459, 20);
+            this.edtToSend.Size = new System.Drawing.Size(611, 22);
             this.edtToSend.TabIndex = 3;
             // 
             // btnSend
             // 
-            this.btnSend.Location = new System.Drawing.Point(519, 318);
+            this.btnSend.Location = new System.Drawing.Point(692, 384);
+            this.btnSend.Margin = new System.Windows.Forms.Padding(4);
             this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(75, 23);
+            this.btnSend.Size = new System.Drawing.Size(100, 28);
             this.btnSend.TabIndex = 4;
             this.btnSend.Text = "Send";
             this.btnSend.UseVisualStyleBackColor = true;
@@ -132,45 +186,20 @@
             // 
             this.backgroundWorker2.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker2_DoWork);
             // 
-            // btnServerStart
-            // 
-            this.btnServerStart.Location = new System.Drawing.Point(589, 20);
-            this.btnServerStart.Name = "btnServerStart";
-            this.btnServerStart.Size = new System.Drawing.Size(75, 23);
-            this.btnServerStart.TabIndex = 2;
-            this.btnServerStart.Text = "Start";
-            this.btnServerStart.UseVisualStyleBackColor = true;
-            this.btnServerStart.Click += new System.EventHandler(this.btnServerStart_Click);
-            // 
-            // btnClientStart
-            // 
-            this.btnClientStart.Location = new System.Drawing.Point(589, 25);
-            this.btnClientStart.Name = "btnClientStart";
-            this.btnClientStart.Size = new System.Drawing.Size(75, 23);
-            this.btnClientStart.TabIndex = 3;
-            this.btnClientStart.Text = "Connect";
-            this.btnClientStart.UseVisualStyleBackColor = true;
-            this.btnClientStart.Click += new System.EventHandler(this.btnClientStart_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(483, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "5000->";
-            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 453);
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.edtToSend);
             this.Controls.Add(this.redtHistory);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1085, 500);
+            this.MinimumSize = new System.Drawing.Size(950, 500);
             this.Name = "Form1";
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
