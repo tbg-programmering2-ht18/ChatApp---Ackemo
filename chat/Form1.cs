@@ -97,6 +97,10 @@ namespace chat
         {
             while (client.Connected)
             {
+                redtHistory.Enabled == false;
+                edtToSend.Enabled = true;
+                btnSend.Enabled = true;
+
                 try
                 {
                     recieve = STR.ReadLine();

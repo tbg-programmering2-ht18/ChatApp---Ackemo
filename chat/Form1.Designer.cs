@@ -42,6 +42,7 @@
             this.btnSend = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+            this.backgroundWorker3 = new System.ComponentModel.BackgroundWorker();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -152,6 +153,7 @@
             // 
             this.redtHistory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.redtHistory.Enabled = false;
             this.redtHistory.Location = new System.Drawing.Point(40, 265);
             this.redtHistory.Margin = new System.Windows.Forms.Padding(4);
             this.redtHistory.Name = "redtHistory";
@@ -161,6 +163,7 @@
             // 
             // edtToSend
             // 
+            this.edtToSend.Enabled = false;
             this.edtToSend.Location = new System.Drawing.Point(40, 390);
             this.edtToSend.Margin = new System.Windows.Forms.Padding(4);
             this.edtToSend.Name = "edtToSend";
@@ -169,6 +172,7 @@
             // 
             // btnSend
             // 
+            this.btnSend.Enabled = false;
             this.btnSend.Location = new System.Drawing.Point(692, 384);
             this.btnSend.Margin = new System.Windows.Forms.Padding(4);
             this.btnSend.Name = "btnSend";
@@ -227,6 +231,7 @@
         private System.Windows.Forms.Button btnServerStart;
         private System.Windows.Forms.Button btnClientStart;
         private System.Windows.Forms.Label label1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker3;
     }
 }
 
