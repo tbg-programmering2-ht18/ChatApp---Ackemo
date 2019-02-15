@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Net;
 using System.Net.Sockets;
 using System.IO;
+using System.Media;
 
 namespace chat
 {
@@ -22,6 +23,7 @@ namespace chat
         public StreamWriter STW;
         public string recieve;
         public string textToSend;
+        private SoundPlayer _soundPlayer;
 
         // KNAS?
         public Form1()
@@ -37,6 +39,7 @@ namespace chat
                     edtServerIP.Text = adress.ToString();
                 }
             }
+            _soundPlayer = new SoundPlayer("Login.wav");
         }
 
         private void btnServerStart_Click(object sender, EventArgs e)
@@ -46,7 +49,7 @@ namespace chat
                 //Check with ex Wireshark 
                 TcpListener listener = new TcpListener(IPAddress.Any, int.Parse(edtServerPort.Text));
                 listener.Start();
-                this.BackColor = Color.Green;
+                this.BackColor = Color.Green; 
                 this.Update();
                 redtHistory.AppendText("Server started" + "\n");
                 redtHistory.Update();
@@ -56,6 +59,7 @@ namespace chat
                 STW.AutoFlush = true;
                 backgroundWorker1.RunWorkerAsync();
                 backgroundWorker2.WorkerSupportsCancellation = true;
+                _soundPlayer.Play();
             }
             catch (Exception ex)
             {
@@ -97,9 +101,18 @@ namespace chat
         {
             while (client.Connected)
             {
-                redtHistory.Enabled == false;
-                edtToSend.Enabled = true;
-                btnSend.Enabled = true;
+                this.redtHistory.Invoke(new MethodInvoker(delegate ()
+                {
+                    redtHistory.Enabled = true;
+                }));
+                this.edtToSend.Invoke(new MethodInvoker(delegate ()
+                {
+                    edtToSend.Enabled = true;
+                }));
+                this.btnSend.Invoke(new MethodInvoker(delegate ()
+                {
+                    btnSend.Enabled = true;
+                }));
 
                 try
                 {
